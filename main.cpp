@@ -42,8 +42,8 @@ int main() {
       *********************************
   */
 //  auto result = resolve_dfs(start, finish, zero_pos, operations);
-  auto result = resolve_idfs(start, operations);
-//  auto result = resolve_astar(start, operations);
+//  auto result = resolve_idfs(start, operations);
+  auto result = resolve_astar(start, operations);
 
   auto finish_time = high_resolution_clock::now();
 

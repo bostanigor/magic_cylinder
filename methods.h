@@ -15,12 +15,6 @@ State * dfs_recursive(State * current, int depth,
   if (depth == 0)
     return nullptr;
 
-  auto iter = state_set.find(*current);
-  if (iter == state_set.end())
-    state_set.insert(*current);
-  else
-    return nullptr;
-
   for (auto& op : operations) {
     if (!current->can_move(op._id))
       continue;
@@ -28,10 +22,11 @@ State * dfs_recursive(State * current, int depth,
     auto new_state = new State(*current);
     new_state->_parent = current;
     op(new_state); new_state->_operation = &op;
-//    if (*new_state == *current) {
-//      delete new_state;
-//      continue;
-//    }
+
+    if (*new_state == *current) {
+      delete new_state;
+      continue;
+    }
 
     auto result = dfs_recursive(new_state, depth - 1, state_set, operations);
     if (result != nullptr) {
@@ -40,7 +35,6 @@ State * dfs_recursive(State * current, int depth,
     delete new_state;
   }
 
-//  state_set.erase(iter);
   return nullptr;
 }
 
@@ -68,7 +62,6 @@ State * resolve_astar(State & start,
                       std::vector<StateOperation> & operations) {
   std::unordered_set<State, MyHashFunc> state_set;
   std::priority_queue<State*, std::vector<State*>, MyPriorityFunc> state_queue;
-
 
   start.update_heuristics(0);
   state_queue.push(&start);

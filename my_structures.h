@@ -32,9 +32,12 @@ bool operator==(const State & left, const State & right) {
 
 struct MyHashFunc {
   size_t operator()(const State & state) {
-//    auto temp = (size_t)(state.value);
-//    return temp;
-    return (size_t)(state._rings);
+    size_t temp = state._rings[0] + 1;
+    for (int i = 2; i < 30; i+=2) {
+      temp = (temp << 2) | (state._rings[i] + 1);
+    }
+
+    return temp;
   };
 };
 
