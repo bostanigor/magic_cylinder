@@ -1,0 +1,3 @@
+/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-debug/CMakeFiles/magic_cylinder.dir

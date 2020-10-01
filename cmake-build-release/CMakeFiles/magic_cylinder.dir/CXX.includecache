@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/CLionProjects/lab1/magic_cylinder/State.cpp
+State.h
+/Users/admin/CLionProjects/lab1/magic_cylinder/State.h
+
+/Users/admin/CLionProjects/lab1/magic_cylinder/State.h
+iostream
+-
+

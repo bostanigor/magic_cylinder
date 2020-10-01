@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="magic_cylinder"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="magic_cylinder">
+				<Option output="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/magic_cylinder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 magic_cylinder"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="magic_cylinder/fast">
+				<Option output="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/magic_cylinder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 magic_cylinder/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/admin/CLionProjects/lab1/magic_cylinder/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/admin/CLionProjects/lab1/magic_cylinder/State.cpp">
+			<Option target="magic_cylinder"/>
+		</Unit>
+		<Unit filename="/Users/admin/CLionProjects/lab1/magic_cylinder/State.h">
+			<Option target="magic_cylinder"/>
+		</Unit>
+		<Unit filename="/Users/admin/CLionProjects/lab1/magic_cylinder/main.cpp">
+			<Option target="magic_cylinder"/>
+		</Unit>
+		<Unit filename="/Users/admin/CLionProjects/lab1/magic_cylinder/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
