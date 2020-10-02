@@ -49,7 +49,7 @@ void State::move_ring_left(int ring_ind) {
   _rings[ring_end] = t;
   if (_zero_i > ring_start && _zero_i < ring_end)
     _zero_i = _zero_i % 5 == 0 ? _zero_i + 4 : _zero_i - 1;
-//  _rotation_counts[ring_ind]++;
+  _rotation_counts[ring_ind]++;
 }
 
 void State::move_ring_right(int ring_ind) {

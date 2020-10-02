@@ -7,7 +7,6 @@
 #include <iostream>
 
 State * dfs_recursive(State * current, int depth,
-                      std::unordered_set<State, MyHashFunc> & state_set,
                       std::vector<StateOperation> & operations) {
   if (current->check_solution())
     return current;
@@ -28,7 +27,7 @@ State * dfs_recursive(State * current, int depth,
       continue;
     }
 
-    auto result = dfs_recursive(new_state, depth - 1, state_set, operations);
+    auto result = dfs_recursive(new_state, depth - 1, operations);
     if (result != nullptr) {
       return result;
     }
@@ -41,8 +40,7 @@ State * dfs_recursive(State * current, int depth,
 State * resolve_dfs(State * start,
                     std::vector<StateOperation> & operations,
                     int limit=80) {
-  std::unordered_set<State, MyHashFunc> state_set;
-  return dfs_recursive(start, limit, state_set, operations);
+  return dfs_recursive(start, limit, operations);
 }
 
 State * resolve_idfs(State & start,
