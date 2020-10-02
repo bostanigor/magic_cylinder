@@ -12,13 +12,22 @@ int main() {
       YOU CAN CHANGE STARTING STATE HERE
       **********************************
   */
-  int matrix[6][5] = {
-      { -1, -1,  1, -1, -1},
-      {  1,  2,  1,  2,  1},
-      {  2,  2,  2,  1,  3},
-      {  3,  3,  3,  3,  4},
-      {  4,  4,  4,  4,  0},
-      {  5,  5,  5,  5,  5},
+//  int matrix[6][5] = {
+//      { -1, -1,  1, -1, -1},
+//      {  1,  2,  1,  2,  1},
+//      {  2,  2,  2,  1,  3},
+//      {  3,  3,  3,  3,  4},
+//      {  4,  4,  4,  4,  0},
+//      {  5,  5,  5,  5,  5},
+//  };
+
+int matrix[6][5] = {
+    { -1, -1, -1, -1,  1},
+    {  1,  2,  1,  2,  1},
+    {  2,  1,  3,  2,  2},
+    {  3,  0,  3,  4,  3},
+    {  4,  3,  4,  4,  4},
+    {  5,  5,  5,  5,  5},
   };
   auto start = State(matrix, nullptr, nullptr);
 
@@ -43,8 +52,8 @@ int main() {
       *********************************
   */
 //  auto result = resolve_dfs(start, finish, zero_pos, operations);
-  auto result = resolve_idfs(start, operations);
-//  auto result = resolve_astar(start, operations);
+//  auto result = resolve_idfs(start, operations);
+  auto result = resolve_astar(start, operations);
 
   auto finish_time = high_resolution_clock::now();
 
