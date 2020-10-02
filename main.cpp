@@ -14,10 +14,10 @@ int main() {
   */
   int matrix[6][5] = {
       { -1, -1,  1, -1, -1},
-      {  1,  1,  1,  2,  1},
-      {  2,  2,  2,  3,  2},
-      {  3,  3,  4,  3,  3},
-      {  4,  4,  0,  4,  4},
+      {  1,  2,  1,  2,  1},
+      {  2,  2,  2,  1,  3},
+      {  3,  3,  3,  3,  4},
+      {  4,  4,  4,  4,  0},
       {  5,  5,  5,  5,  5},
   };
   auto start = State(matrix, nullptr, nullptr);
@@ -29,13 +29,11 @@ int main() {
 
   std::vector<StateOperation> operations;
 
-  operations.push_back(StateOperation(" UP ",   10, [](State * state) { state->move_zero_up(); }));
-  operations.push_back(StateOperation(" DOWN ",-10, [](State * state) { state->move_zero_down(); }));
+  operations.emplace_back(" UP ",    10, [](State * state) { state->move_zero_up(); });
+  operations.emplace_back(" DOWN ", -10, [](State * state) { state->move_zero_down(); });
   for (int i = 0; i < 6; i++) {
-    operations.push_back(StateOperation(
-      " LEFT " + std::to_string(i), -(i + 1), [i](State * state) { state->move_ring_left(i); }));
-    operations.push_back(StateOperation(
-      " RIGHT " + std::to_string(i), i + 1,   [i](State * state) { state->move_ring_right(i); }));
+    operations.emplace_back(" LEFT " + std::to_string(i), -(i + 1), [i](State * state) { state->move_ring_left(i); });
+    operations.emplace_back(" RIGHT " + std::to_string(i),  i + 1,  [i](State * state) { state->move_ring_right(i); });
   }
 
   auto start_time = high_resolution_clock::now();

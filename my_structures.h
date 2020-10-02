@@ -4,7 +4,23 @@
 #include "State.h"
 
 bool check_resolution(State & start) {
-  return true;
+  auto inv = 0;
+  for (int i = 0; i < 6; i++) {
+    for (int j = 0; j < 5; j++) {
+      auto val1 = start._rings[i * 5 + j];
+      if (val1 == -1) continue;
+//      if (val1 == 0) inv += i;
+
+      for (int i1 = 0; i1 <= i; i1++) {
+        for (int j1 = 0; j1 < 5; j1++) {
+          auto val2 = start._rings[j];
+          if (val2 > val1)
+            inv++;
+        }
+      }
+    }
+  }
+  return inv % 2 == 0;
 }
 
 void draw_state(const State * state) {
