@@ -31,10 +31,10 @@ int State::m_distance() {
 bool State::can_move(int oper_i) {
   if (_operation != nullptr && _operation->_id == -oper_i)
     return false;
-  if (oper_i == 10 && (_zero_i < 5 || _rings[_zero_i - 5] == -1)) // MOVE UP
-    return false;
-  if (oper_i == -10 && _zero_i > 24) // MOVE DOWN
-    return false;
+  if (oper_i == 10) // MOVE UP
+    return _zero_i >= 5 && _rings[_zero_i - 5] != -1;
+  if (oper_i == -10) // MOVE DOWN
+    return _zero_i <= 24;
   if (_rotation_counts[abs(oper_i) - 1] > 1)
     return false;
   return true;
@@ -47,7 +47,7 @@ void State::move_ring_left(int ring_ind) {
   for (int i = ring_start; i < ring_end; i++)
     _rings[i] = _rings[i + 1];
   _rings[ring_end] = t;
-  if (_zero_i > ring_start && _zero_i < ring_end)
+  if (_zero_i >= ring_start && _zero_i <= ring_end)
     _zero_i = _zero_i % 5 == 0 ? _zero_i + 4 : _zero_i - 1;
   _rotation_counts[ring_ind]++;
 }
@@ -59,7 +59,7 @@ void State::move_ring_right(int ring_ind) {
   for (int i = ring_end; i > ring_start; i--)
     _rings[i] = _rings[i - 1];
   _rings[ring_start] = t;
-  if (_zero_i > ring_start && _zero_i < ring_end)
+  if (_zero_i >= ring_start && _zero_i <= ring_end)
     _zero_i = _zero_i % 5 == 4 ? _zero_i - 4 : _zero_i + 1;
   _rotation_counts[ring_ind]++;
 }
