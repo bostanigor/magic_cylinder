@@ -22,7 +22,10 @@ int main() {
   };
   auto start = State(matrix, nullptr, nullptr);
 
-  // TODO: Check solution existence
+  if (!check_resolution(start)) {
+    std::cout << "No solutions";
+    return 0;
+  }
 
   std::vector<StateOperation> operations;
 
