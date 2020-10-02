@@ -63,6 +63,7 @@ State * resolve_astar(State & start,
 
   start.update_heuristics(0);
   state_queue.push(&start);
+  auto f_max = 0;
 
   while(true) {
     auto state = state_queue.top();
@@ -83,6 +84,11 @@ State * resolve_astar(State & start,
       }
       else
         continue;
+    }
+
+    if (state->_f > f_max) {
+      f_max = state->_f;
+      std::cout << "f = " << f_max << std::endl;
     }
 
     for (auto &op : operations) {
